@@ -1,0 +1,12 @@
+# 统一换行符：文本文件入库为 LF，脚本按平台约定
+* text=auto
+*.py text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+*.batx text eol=crlf
+*.db binary
+*.key binary
