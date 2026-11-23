@@ -7,7 +7,7 @@ Views.login = function () {
     <div class="auth-wrap">
       <div class="card auth-card">
         <h2>学校自习室预约系统</h2>
-        ${adminMode ? '<div class="hint-box">已选择<strong>管理员后台入口</strong>，请使用管理员账号登录（默认学号 1160423527）。</div>' : ''}
+        ${adminMode ? '<div class="hint-box">已选择<strong>管理员后台入口</strong>，请使用管理员账号登录（默认账号 admin / admin123，请及时修改）。</div>' : ''}
         <div class="field"><label>学号</label><input id="f-student-id" autocomplete="username"></div>
         <div class="field"><label>密码</label><input id="f-password" type="password" autocomplete="current-password"></div>
         <div class="err-text" id="login-err"></div>

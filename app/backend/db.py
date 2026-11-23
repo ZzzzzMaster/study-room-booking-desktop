@@ -88,8 +88,9 @@ def init_db():
 
 
 # ── 种子数据 ───────────────────────────────────────────────────────────
-DEFAULT_ADMIN_STUDENT_ID = "1160423527"
-DEFAULT_ADMIN_PASSWORD = "1160423527"
+# 演示用默认管理员：仅首次建库时写入，部署或公开使用前请改成自己的账号密码
+DEFAULT_ADMIN_STUDENT_ID = "admin"
+DEFAULT_ADMIN_PASSWORD = "admin123"
 
 
 def seed(force: bool = False):

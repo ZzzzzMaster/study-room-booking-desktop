@@ -71,7 +71,9 @@ python server.py
 
 首次启动会自动建库并写入种子数据：一个默认管理员账号和两个演示自习室（含无插座、损坏、禁用座位等边界情况）。
 
-默认管理员账号的学号与密码定义在 `app/backend/db.py` 的 `DEFAULT_ADMIN_STUDENT_ID` / `DEFAULT_ADMIN_PASSWORD` 中，**部署或公开使用前请修改为自己的账号密码**。
+默认管理员账号 `admin` / `admin123`，定义在 `app/backend/db.py` 的 `DEFAULT_ADMIN_STUDENT_ID` / `DEFAULT_ADMIN_PASSWORD`，**部署或公开使用前请务必改成自己的账号密码**。
+
+注意默认账号只在**首次建库**时写入。沿用已有数据库时仍按原账号登录，或删除 `app/data/` 下的 `.db` 文件重建。
 
 局域网内其他设备（手机、同学电脑）访问：服务默认监听 `0.0.0.0`，用 `http://<本机局域网 IP>:8000` 即可，需放行防火墙。
 
