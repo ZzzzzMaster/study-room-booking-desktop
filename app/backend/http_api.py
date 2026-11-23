@@ -213,7 +213,7 @@ def api_room_seats(rid, query):
                 "SELECT seat_id FROM bookings WHERE date = ? AND status IN ('reserved','occupied') "
                 "AND start_time < ? AND end_time > ?",
                 (date_s, end_s, start_s)).fetchall()}
-            slot = {"date": date_s, "start": start_s, "end": end_s, "occupied": occupied}
+            slot = {"date": date_s, "start": start_s, "end": end_s, "occupied": sorted(occupied)}
 
         sql = "SELECT id, room_id, seat_no, has_power, status FROM seats WHERE room_id = ?"
         args = [rid]
